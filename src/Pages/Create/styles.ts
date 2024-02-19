@@ -9,6 +9,7 @@ export const Container = styled(Animated.View)`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  z-index: 1;  
 `;
 
 export const Title = styled.Text`
@@ -36,7 +37,7 @@ export const InputBox = styled.View`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
   max-height: 50px;
 `;
 
@@ -72,7 +73,7 @@ export const SubmitButton = styled.TouchableOpacity`
   width: 35%;
   padding: 5px 10px;
   border: 1px solid #00ff00;
-  margin: 40px 0 20px 0;
+  margin: 20px 0 10px 0;
 
   text-align: center;
 

@@ -3,19 +3,16 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { Router } from "./src/Router";
 import { CepProvider } from "./src/Providers/CEP/";
-import { FirebaseProvider } from "./src/Providers/Firebase";
 import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
     <>
-      <StatusBar hidden/>
+      <StatusBar hidden />
       <NavigationContainer>
-        <FirebaseProvider>
-          <CepProvider>
-            <Router />
-          </CepProvider>
-        </FirebaseProvider>
+        <CepProvider>
+          <Router />
+        </CepProvider>
       </NavigationContainer>
     </>
   );

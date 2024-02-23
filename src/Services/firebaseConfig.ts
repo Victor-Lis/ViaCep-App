@@ -4,6 +4,7 @@ import { getDatabase, ref } from 'firebase/database';
 const firebaseConfig = {
   apiKey: "AIzaSyBY4a589V6eMCrI3rdO6rvrh9zveoWaa1w",
   authDomain: "cep-signup.firebaseapp.com",
+  databaseURL: "https://cep-signup-default-rtdb.firebaseio.com",
   projectId: "cep-signup",
   storageBucket: "cep-signup.appspot.com",
   messagingSenderId: "914077431492",

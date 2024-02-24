@@ -1,8 +1,7 @@
 import { Adress } from "../../../@types/Adress";
-import { enderecosRef } from "../../../Services/firebaseConfig";
-import { push } from "firebase/database";
+import { DatabaseReference, push } from "firebase/database";
 
-export async function createAdress({endereco}:{endereco: Adress}) {
+export async function createAdress({endereco, enderecosRef}:{endereco: Adress, enderecosRef: DatabaseReference}) {
   try{
     let res = await push(enderecosRef, endereco)
     return res

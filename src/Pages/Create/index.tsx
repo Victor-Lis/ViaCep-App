@@ -20,14 +20,11 @@ import { getSiglas } from "../../utils/getUfName"
 import { CepContext } from "../../Providers/CEP"
 import { useAppDrawerNavigation } from "../../hooks/useAppDrawerNavigation"
 import { SlideInRight } from "react-native-reanimated"
-
-// type Props = DrawerScreenProps<RootRoutes, 'Criar Endereço'>
-
-// const useAppRoute = <T extends keyof RootRoutes>(screen: T) => {
-// 	return useRoute<RouteProp<RootRoutes, T>>()
-// }
+import { AuthContext } from "../../Providers/Auth"
+import { DatabaseReference} from 'firebase/database'
 
 export default function Create() {
+	const { enderecosRef } = useContext(AuthContext)
 	const { getDatas } = useContext(CepContext)
 	const navigation = useAppDrawerNavigation()
 
@@ -108,8 +105,9 @@ export default function Create() {
 			setLoading(true)
 			let newData = await createAdress({
 				endereco,
+				enderecosRef: enderecosRef as DatabaseReference,
 			})
-			let data = await getDatas()
+			let data = await getDatas({enderecosRef: enderecosRef as DatabaseReference})
 			if (data) {
 				handleClearAdress()
 				navigation.navigate("Endereços")

@@ -6,14 +6,16 @@ import AdressCard from "./Components/AdressCard"
 import { Adress } from "../../@types/Adress"
 
 import { Container } from "./styles"
+import { AuthContext } from "../../Providers/Auth"
 
 export default function Home() {
-	const { allAdress } = useContext(CepContext)
+	const { user } = useContext(AuthContext)
+	console.log(user)
 
 	return (
 		<Container>
 			<FlatList
-				data={allAdress}
+				data={user?.enderecos}
 				renderItem={({ item, index }: { item: Adress; index: number }) => (
 					<AdressCard adress={item} />
 				)}

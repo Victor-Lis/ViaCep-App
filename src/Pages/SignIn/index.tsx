@@ -1,13 +1,10 @@
 import React, { useContext, useState } from "react";
 import {
-  View,
   Text,
-  StyleSheet,
   TouchableOpacity,
-  TextInput,
-  SafeAreaView,
   Platform,
 } from "react-native";
+import { Container, Logo, Input, ButtonLogin, ButtonLoginText } from './styles'
 import { signIn } from "../../Services/auth/signin";
 import { signUp } from "../../Services/auth/signup";
 import { useAuthContext } from "../../hooks/useAuthContext";
@@ -37,15 +34,14 @@ export default function SignIn() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.logo}>ViaCep App</Text>
+    <Container>
+      <Logo style={{marginTop: Platform.OS === "android" ? 55 : 80}}>ViaCep App</Logo>
       <Text style={{ marginBottom: 20 }}>
         Cadastre seus endereços, agilize sua vida!
       </Text>
 
       {type && (
-        <TextInput
-          style={styles.input}
+        <Input
           value={name}
           onChangeText={(text) => setName(text)}
           placeholder="Qual seu nome?"
@@ -53,70 +49,32 @@ export default function SignIn() {
         />
       )}
 
-      <TextInput
-        style={styles.input}
+      <Input
         value={email}
         onChangeText={(text) => setEmail(text)}
         placeholder="Seu email"
         placeholderTextColor="#99999B"
       />
 
-      <TextInput
-        style={styles.input}
+      <Input
         value={password}
         onChangeText={(text) => setPassword(text)}
         placeholder="Sua senha"
         placeholderTextColor="#99999B"
       />
 
-      <TouchableOpacity
+      <ButtonLogin
         style={[
-          styles.buttonLogin,
           { backgroundColor: type ? "#F53745" : "#57DD86" },
         ]}
         onPress={handleLogin}
       >
-        <Text style={styles.buttonText}>{type ? "Cadastrar" : "Acessar"}</Text>
-      </TouchableOpacity>
+        <ButtonLoginText>{type ? "Cadastrar" : "Acessar"}</ButtonLoginText>
+      </ButtonLogin>
 
       <TouchableOpacity onPress={() => setType(!type)}>
         <Text>{type ? "Já possuo uma conta" : "Criar uma nova conta"}</Text>
       </TouchableOpacity>
-    </SafeAreaView>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: "#FFF",
-  },
-  logo: {
-    marginTop: Platform.OS === "android" ? 55 : 80,
-    fontSize: 28,
-    fontWeight: "bold",
-  },
-  input: {
-    color: "#121212",
-    backgroundColor: "#EBEBEB",
-    width: "90%",
-    borderRadius: 6,
-    marginBottom: 10,
-    paddingHorizontal: 8,
-    height: 50,
-  },
-  buttonLogin: {
-    width: "90%",
-    height: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: 10,
-    borderRadius: 6,
-  },
-  buttonText: {
-    color: "#FFF",
-    fontWeight: "bold",
-    fontSize: 19,
-  },
-});

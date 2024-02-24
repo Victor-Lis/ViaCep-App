@@ -20,8 +20,13 @@ import { CepContext } from "../../Providers/CEP";
 import { edit } from "./utils/edit";
 import { cepFormat } from "../../utils/cepFormat";
 import { SlideInDown, SlideInUp } from 'react-native-reanimated'
+import { AuthContext } from "../../Providers/Auth";
+import { DatabaseReference, ref } from "firebase/database";
+import { db } from "../../Services/firebaseConfig";
 
 export default function AdressPage() {
+  
+  const { enderecosRef, enderecosRefString, getUserDatas } = useContext(AuthContext)
   const { getDatas } = useContext(CepContext);
   const [editing, setEditing] = useState(false);
   const route = useAppRoute("Endereço");
@@ -34,19 +39,22 @@ export default function AdressPage() {
   }
 
   async function handleEdit() {
-    let data = await edit({ adress: endereco as Adress });
+    const enderecoRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
+    let data = await edit({ adress: endereco as Adress, enderecoRef: enderecoRef as DatabaseReference });
     if (data) {
-      let newDatas = await getDatas();
+      let newDatas = await getDatas({enderecosRef: enderecosRef as DatabaseReference});
       if (newDatas) {
+        getUserDatas()
         navigation.goBack();
       }
     }
   }
 
   async function handleDelete() {
-    let data = await exclude({ adress: route.params.endereco as Adress });
+    const enderecoRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
+    let data = await exclude({ adress: route.params.endereco as Adress, enderecoRef: enderecoRef as DatabaseReference});
     if (data) {
-      let newDatas = await getDatas();
+      let newDatas = await getDatas({enderecosRef: enderecosRef as DatabaseReference});
       if (newDatas) {
         navigation.goBack();
       }

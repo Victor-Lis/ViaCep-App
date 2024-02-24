@@ -1,11 +1,10 @@
 import { Adress } from "../../../@types/Adress";
 import { db } from "../../../Services/firebaseConfig";
-import { ref, set } from "firebase/database"
+import { DatabaseReference, ref, set } from "firebase/database"
 
-export async function edit({adress}: {adress: Adress}){
+export async function edit({adress, enderecoRef}: {adress: Adress, enderecoRef: DatabaseReference}){
 	try {
-		const reference = ref(db, `enderecos/${adress.id}`)
-        let data = await set(reference, adress)        
+        let data = await set(enderecoRef, adress)        
         return true
 	} catch (e) {
 		console.log(e)

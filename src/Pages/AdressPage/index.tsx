@@ -14,9 +14,9 @@ import { Text } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import { useAppRoute } from "../../hooks/useAppStackRoute";
 import { useAppStackNavigation } from "../../hooks/useAppStackNavigation";
-import { exclude } from "./utils/exclude";
+import { exclude } from "../../Services/exclude/exclude";
 import { Adress } from "../../@types/Adress";
-import { edit } from "./utils/edit";
+import { edit } from "../../Services/edit/edit";
 import { cepFormat } from "../../utils/cepFormat";
 import { SlideInDown, SlideInUp } from 'react-native-reanimated'
 import { AuthContext } from "../../Providers/Auth";

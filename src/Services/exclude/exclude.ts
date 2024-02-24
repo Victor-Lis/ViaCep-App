@@ -1,5 +1,4 @@
-import { Adress } from "../../../@types/Adress";
-import { db } from "../../../Services/firebaseConfig";
+import { Adress } from "../../@types/Adress";
 import { DatabaseReference, ref, remove } from "firebase/database"
 
 export async function exclude({adress, enderecoRef}: {adress: Adress, enderecoRef: DatabaseReference}){

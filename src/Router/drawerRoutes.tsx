@@ -4,9 +4,10 @@ const Drawer = createDrawerNavigator<RootRoutes>();
 
 import Header from "../Components/HeaderDrawer";
 
-import CreateCEP from "../Pages/Create";
 import { RootRoutes } from "./drawerRoutesType";
 import { AdressRoute } from "./adressRoutes";
+import CreateCEP from "../Pages/Create";
+import User from "../Pages/User";
 
 export function MainRouter() {
   return (
@@ -21,6 +22,13 @@ export function MainRouter() {
       <Drawer.Screen
         name="Criar Endereço"
         component={CreateCEP}
+        options={{
+          header: (props) => <Header props={props} />,
+        }}
+      />
+      <Drawer.Screen
+        name="Usuário"
+        component={User}
         options={{
           header: (props) => <Header props={props} />,
         }}

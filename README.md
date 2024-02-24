@@ -115,7 +115,7 @@ O mais útil é que não existem mais erros "da parte do Dev" por exemplo ao err
 
 <img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o2.jpg">
 
-<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7os%20Menu%20Aberto.jpg">
 
 #### Editando
 
@@ -128,6 +128,17 @@ O mais útil é que não existem mais erros "da parte do Dev" por exemplo ao err
 <img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o2.jpg">
 
 <img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o%20Menu%20Aberto.jpg">
+
+### v1.79 >= 
+
+#### SignIn
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignIn.jpg">
+
+#### SignUp
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignUp.jpg">
+
+#### SignOut
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignOut.jpg">
 
 ## Autores
 

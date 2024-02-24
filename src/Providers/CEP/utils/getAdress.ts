@@ -1,11 +1,9 @@
 import { Adress } from "../../../@types/Adress"
 import { app } from "../../../Services/firebaseConfig" 
-import { get, getDatabase, ref } from "firebase/database"
+import { DatabaseReference, get, getDatabase, ref } from "firebase/database"
 
-export async function getAdress() {
+export async function getAdress({enderecosRef}:{enderecosRef: DatabaseReference}) {
 	try {
-		const db = getDatabase(app);
-		const enderecosRef = ref(db, "/enderecos")
 		let res = await get(enderecosRef)
 		let data = await res.val()
 		if(!data){
@@ -16,6 +14,7 @@ export async function getAdress() {
 		keys.map((key, index) => {
 			dataArray[index].id = key
 		})
+		console.log(dataArray)
 		return dataArray
 	} catch (e) {
 		console.log(e)

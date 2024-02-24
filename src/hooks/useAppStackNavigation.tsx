@@ -1,5 +1,5 @@
 import { NavigationProp, useNavigation } from "@react-navigation/native"
-import { RootRoutes } from "../Router/stackRoutesType"
+import { RootRoutes } from "../Router/adressRoutesType"
 
 type NavType = NavigationProp<RootRoutes>
 

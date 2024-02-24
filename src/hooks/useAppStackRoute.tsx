@@ -1,5 +1,5 @@
 import { RouteProp, useRoute } from "@react-navigation/native"
-import { RootRoutes } from "../Router/stackRoutesType"
+import { RootRoutes } from "../Router/adressRoutesType"
 import { DrawerScreenProps } from "@react-navigation/drawer"
 
 type Props = DrawerScreenProps<RootRoutes, 'Endereço'>

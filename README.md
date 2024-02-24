@@ -107,27 +107,27 @@ O mais útil é que não existem mais erros "da parte do Dev" por exemplo ao err
 
 ### Endereços
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7os.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7os.jpg">
 
 ### Endereço
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o.jpg">
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o2.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o2.jpg">
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
 
 #### Editando
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
 
 ### Criar Endereço
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o.jpg">
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o2.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o2.jpg">
 
-<img width="100px" height="200px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o%20Menu%20Aberto.jpg">
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o%20Menu%20Aberto.jpg">
 
 ## Autores
 

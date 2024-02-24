@@ -12,27 +12,30 @@ type SignInProps = {
 };
 
 export async function signIn(authDatas: SignInProps) {
-  const { email, password } = authDatas
+  const { email, password } = authDatas;
   // console.log('Email', email)
   // console.log('Password', password)
-  let sucessfullLogin = false
   await signInWithEmailAndPassword(auth, email, password)
     .then(async (user) => {
-        const userRef = ref(db, `usuarios/${user.user.uid}`);
-        await get(userRef)
-        .then(async (snapshot) => {
-            let userDatas = await snapshot.val()
-            userDatas["key"] = user.user.uid
-            const enderecosValues: Adress[] = Object.values(userDatas?.enderecos)
-            const enderecosKeys = Object.keys(userDatas?.enderecos)
-            
-            enderecosKeys.map((key, index) => {
-              enderecosValues[index].id = key
-            })
+      const userRef = ref(db, `usuarios/${user.user.uid}`);
+      await get(userRef).then(async (snapshot) => {
+        let userDatas = await snapshot.val();
+        userDatas["key"] = user.user.uid;
 
-            userDatas.enderecos = enderecosValues as Adress[]
-            authDatas.setContext(userDatas as UserType)
-        })
+        if (userDatas?.enderecos) {
+          const enderecosValues: Adress[] = Object.values(userDatas?.enderecos);
+          const enderecosKeys = Object.keys(userDatas?.enderecos);
+
+          enderecosKeys.map((key, index) => {
+            enderecosValues[index].id = key;
+          });
+
+          userDatas.enderecos = enderecosValues as Adress[];
+        }else{
+          userDatas.enderecos = []
+        }
+        authDatas.setContext(userDatas as UserType);
+      });
     })
     .catch((e) => {
       console.log("Error");

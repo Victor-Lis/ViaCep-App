@@ -17,15 +17,13 @@ import { getAdressDataByCEP, getAdressData } from "./utils/getAdressData"
 import { createAdress } from "./utils/createAdress"
 import { Adress } from "../../@types/Adress"
 import { getSiglas } from "../../utils/getUfName"
-import { CepContext } from "../../Providers/CEP"
 import { useAppDrawerNavigation } from "../../hooks/useAppDrawerNavigation"
 import { SlideInRight } from "react-native-reanimated"
 import { AuthContext } from "../../Providers/Auth"
 import { DatabaseReference} from 'firebase/database'
 
 export default function Create() {
-	const { enderecosRef } = useContext(AuthContext)
-	const { getDatas } = useContext(CepContext)
+	const { enderecosRef, getUserDatas } = useContext(AuthContext)
 	const navigation = useAppDrawerNavigation()
 
 	const [cep, setCep] = useState<string>("")
@@ -107,7 +105,7 @@ export default function Create() {
 				endereco,
 				enderecosRef: enderecosRef as DatabaseReference,
 			})
-			let data = await getDatas({enderecosRef: enderecosRef as DatabaseReference})
+			let data = await getUserDatas()
 			if (data) {
 				handleClearAdress()
 				navigation.navigate("Endereços")

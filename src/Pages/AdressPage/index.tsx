@@ -16,7 +16,6 @@ import { useAppRoute } from "../../hooks/useAppStackRoute";
 import { useAppStackNavigation } from "../../hooks/useAppStackNavigation";
 import { exclude } from "./utils/exclude";
 import { Adress } from "../../@types/Adress";
-import { CepContext } from "../../Providers/CEP";
 import { edit } from "./utils/edit";
 import { cepFormat } from "../../utils/cepFormat";
 import { SlideInDown, SlideInUp } from 'react-native-reanimated'
@@ -27,7 +26,6 @@ import { db } from "../../Services/firebaseConfig";
 export default function AdressPage() {
   
   const { enderecosRef, enderecosRefString, getUserDatas } = useContext(AuthContext)
-  const { getDatas } = useContext(CepContext);
   const [editing, setEditing] = useState(false);
   const route = useAppRoute("Endereço");
 
@@ -39,24 +37,23 @@ export default function AdressPage() {
   }
 
   async function handleEdit() {
-    const enderecoRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
-    let data = await edit({ adress: endereco as Adress, enderecoRef: enderecoRef as DatabaseReference });
+    const enderecoEditRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
+    let data = await edit({ adress: endereco as Adress, enderecoRef: enderecoEditRef });
     if (data) {
-      let newDatas = await getDatas({enderecosRef: enderecosRef as DatabaseReference});
-      if (newDatas) {
-        getUserDatas()
-        navigation.goBack();
+      let newDatas = await getUserDatas()
+      if(newDatas){
+        navigation.goBack()
       }
     }
   }
 
   async function handleDelete() {
-    const enderecoRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
-    let data = await exclude({ adress: route.params.endereco as Adress, enderecoRef: enderecoRef as DatabaseReference});
+    const enderecoDeleteRef = ref(db, `${enderecosRefString}/${endereco.id as string}`)
+    let data = await exclude({ adress: endereco as Adress, enderecoRef: enderecoDeleteRef });
     if (data) {
-      let newDatas = await getDatas({enderecosRef: enderecosRef as DatabaseReference});
-      if (newDatas) {
-        navigation.goBack();
+      let newDatas = await getUserDatas()
+      if(newDatas){
+        navigation.goBack()
       }
     }
   }

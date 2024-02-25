@@ -103,7 +103,42 @@ export const useAppStackNavigation = () => {
 
 O mais útil é que não existem mais erros "da parte do Dev" por exemplo ao errar o nome de uma Screen, já que o TypeScript irá avisar.
 
-## Telas [...Em Construção]
+## Telas 
+
+### Endereços
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7os.jpg">
+
+### Endereço
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o.jpg">
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o2.jpg">
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7os%20Menu%20Aberto.jpg">
+
+#### Editando
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Endere%C3%A7o%20Editando.jpg">
+
+### Criar Endereço
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o.jpg">
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o2.jpg">
+
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/Criar%20Endere%C3%A7o%20Menu%20Aberto.jpg">
+
+### v1.79 >= 
+
+#### SignIn
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignIn.jpg">
+
+#### SignUp
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignUp.jpg">
+
+#### SignOut
+<img width="200px" height="400px" src="https://github.com/Victor-Lis/ViaCep-App/blob/master/assets/project-images/SignOut.jpg">
 
 ## Autores
 

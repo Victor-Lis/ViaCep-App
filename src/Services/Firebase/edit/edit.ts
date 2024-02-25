@@ -1,4 +1,4 @@
-import { Adress } from "../../@types/Adress";
+import { Adress } from "../../../@types/Adress";
 import { DatabaseReference, ref, set } from "firebase/database"
 
 export async function edit({adress, enderecoRef}: {adress: Adress, enderecoRef: DatabaseReference}){

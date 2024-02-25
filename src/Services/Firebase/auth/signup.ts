@@ -2,7 +2,7 @@ import { ref, set } from "firebase/database";
 import { auth, db } from "../firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Dispatch, SetStateAction } from "react";
-import { UserType } from "../../@types/User";
+import { UserType } from "../../../@types/User";
 
 type SignUpProps = {
   email: string;

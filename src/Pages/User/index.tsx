@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Text, TouchableOpacity, Platform } from "react-native";
 import { Container, Logo, Input, ButtonLogin, ButtonLoginText } from "./styles";
 import { AuthContext } from "../../Providers/Auth";
-import { signOutFunction } from "../../Services/auth/signout";
+import { signOutFunction } from "../../Services/Firebase/auth/signout";
 
 export default function User() {
   const { user, setUser } = useContext(AuthContext);

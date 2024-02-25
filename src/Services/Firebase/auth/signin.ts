@@ -1,9 +1,9 @@
 import { get, getDatabase, ref, set } from "firebase/database";
 import { auth, db } from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { UserType } from "../../@types/User";
+import { UserType } from "../../../@types/User";
 import { Dispatch, SetStateAction } from "react";
-import { Adress } from "../../@types/Adress";
+import { Adress } from "../../../@types/Adress";
 
 type SignInProps = {
   email: string;

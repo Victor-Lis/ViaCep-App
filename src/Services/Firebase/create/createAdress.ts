@@ -1,4 +1,4 @@
-import { Adress } from "../../@types/Adress";
+import { Adress } from "../../../@types/Adress";
 import { DatabaseReference, push } from "firebase/database";
 
 export async function createAdress({endereco, enderecosRef}:{endereco: Adress, enderecosRef: DatabaseReference}) {

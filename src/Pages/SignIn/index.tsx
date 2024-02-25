@@ -5,8 +5,8 @@ import {
   Platform,
 } from "react-native";
 import { Container, Logo, Input, ButtonLogin, ButtonLoginText } from './styles'
-import { signIn } from "../../Services/auth/signin";
-import { signUp } from "../../Services/auth/signup";
+import { signIn } from "../../Services/Firebase/auth/signin";
+import { signUp } from "../../Services/Firebase/auth/signup";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 export default function SignIn() {

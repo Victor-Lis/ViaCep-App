@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { UserType } from "../../@types/User";
 import { ref, DatabaseReference, get } from "firebase/database";
-import { db } from "../../Services/firebaseConfig";
+import { db } from "../../Services/Firebase/firebaseConfig";
 import { Adress } from "../../@types/Adress";
 
 interface AuthContextData {
@@ -43,6 +43,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }
 
+  async function getLocalUser(){
+
+  }
+
   useEffect(() => {
     if(user){
       console.log(user)
@@ -50,6 +54,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setEnderecosRef(ref(db, `usuarios/${user.key}/enderecos`))
     }
   }, [user])
+
+  useEffect(() => {
+    getLocalUser()
+  }, [])
 
   return (
     <AuthContext.Provider value={{ user, setUser, enderecosRef, enderecosRefString, getUserDatas }}>

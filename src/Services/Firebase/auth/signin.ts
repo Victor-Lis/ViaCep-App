@@ -18,7 +18,7 @@ export async function signIn(authDatas: SignInProps) {
   await signInWithEmailAndPassword(auth, email, password)
     .then(async (user) => {
       const userRef = ref(db, `usuarios/${user.user.uid}`);
-      await get(userRef).then(async (snapshot) => {
+      await get(userRef).then(async (snapshot: any) => {
         let userDatas = await snapshot.val();
         userDatas["key"] = user.user.uid;
 
